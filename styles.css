@@ -104,11 +104,7 @@
 display: none;
   }
   
-  /* Mobile Menu */
-  @media (max-width: 768px) {
-    #menu-toggle {
-      display: block;
-    }
+   @media (min-width: 319px) and (max-width: 480px) {
     #nav-menu {
       flex-direction: column;
       align-items: center;
@@ -138,10 +134,54 @@ display: none;
       flex-direction: column;
       gap: 10px;
     }
+    .portfolio {
+      padding: 30px 15px; /* Reduced padding for a tighter layout */
+    }
+  
+    .portfolio-grid {
+      /* Adjust grid layout for smaller screens */
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+  
+    .portfolio-item img {
+      height: auto; /* Let images adjust their height based on content */
+    }
   }
-/* Media query targeting screens 1080px wide or less */
-
-@media (max-width: 1080px) {
+  
+  /* Media query targeting screens 1080px wide or less */
+@media (min-width: 481px) and (max-width: 1200px) {
+ 
+  #nav-menu {
+    flex-direction: column;
+    align-items: center;
+    background: var(--mobile-bg);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+  #nav-menu ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  #nav-menu ul li {
+    margin: 10px 0;
+  }
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo-container {
+    margin-bottom: 10px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
   .portfolio {
     padding: 30px 15px; /* Reduced padding for a tighter layout */
   }
@@ -157,6 +197,7 @@ display: none;
     height: auto; /* Let images adjust their height based on content */
   }
 }
+
 
   
   /* Hero Section */
