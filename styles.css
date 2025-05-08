@@ -99,10 +99,6 @@
     text-decoration: underline;
     color: var(--primary-bg);
   }
-
-  #menu-toggle {
-display: none;
-  }
   
    @media (min-width: 319px) and (max-width: 480px) {
     #nav-menu {
