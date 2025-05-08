@@ -139,6 +139,25 @@ display: none;
       gap: 10px;
     }
   }
+/* Media query targeting screens 1080px wide or less */
+
+@media (max-width: 1080px) {
+  .portfolio {
+    padding: 30px 15px; /* Reduced padding for a tighter layout */
+  }
+
+  .portfolio-grid {
+    /* Adjust grid layout for smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .portfolio-item img {
+    height: auto; /* Let images adjust their height based on content */
+  }
+}
+
   
   /* Hero Section */
   .hero {
