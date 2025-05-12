@@ -1,7 +1,6 @@
-document.getElementById("menu-toggle").addEventListener("click", function () {
-    var menu = document.getElementById("nav-menu");
-    menu.style.display = (menu.style.display === "block") ? "none" : "block";
-});
+document.getElementById('menu-toggle').addEventListener('click', () => {
+    document.getElementById('nav-menu').classList.toggle('open');
+  });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
