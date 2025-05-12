@@ -254,23 +254,6 @@
     text-align: center;
   }
   
-  /* Button Styling */
-  .btn {
-    display: inline-block;
-    background: var(--primary-bg);
-    color: white;
-    margin: 10px;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease, color 0.3s ease;
-  }
-  
-  .btn:hover {
-    background: var(--secondary-bg);
-    color: #000;
-  }
   
   /* Services Section */
   .services {
