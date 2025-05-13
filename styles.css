@@ -105,6 +105,7 @@ nav ul li a:hover {
   gap: 20px;
 }
 
+/* === Small phones (max-width: 480px) === */
 @media (max-width: 480px) {
   header {
     flex-direction: column;
@@ -112,31 +113,29 @@ nav ul li a:hover {
     gap: 15px;
   }
 
-  @media (max-width: 768px) {
-    #menu-toggle {
-      display: block;
-    }
-    
-    #nav-menu {
-      flex-direction: column;
-      align-items: center;
-      background: var(--mobile-bg);
-      position: absolute;
-      top: 50px;
-      left: 0;
-      width: 100%;
-      padding: 10px;
-    }
-    
-    #nav-menu ul {
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
-    }
-    
-    #nav-menu ul li {
-      margin: 10px 0;
-    }
+  #menu-toggle {
+    display: block;
+  }
+  
+  #nav-menu {
+    flex-direction: column;
+    align-items: center;
+    background: var(--mobile-bg);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  #nav-menu ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  
+  #nav-menu ul li {
+    margin: 10px 0;
   }
 
   /* Hero tweaks */
@@ -162,6 +161,14 @@ nav ul li a:hover {
     gap: 10px;
     margin-top: 10px;
   }
+
+  .framed-section, .services, .feedback {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .portfolio-grid {
+    gap: 8px;
+  }
 }
 
 /* === Tablets (481px to 768px) === */
@@ -172,31 +179,29 @@ nav ul li a:hover {
     gap: 20px;
   }
 
-  @media (max-width: 768px) {
-    #menu-toggle {
-      display: block;
-    }
-    
-    #nav-menu {
-      flex-direction: column;
-      align-items: center;
-      background: var(--mobile-bg);
-      position: absolute;
-      top: 50px;
-      left: 0;
-      width: 100%;
-      padding: 10px;
-    }
-    
-    #nav-menu ul {
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
-    }
-    
-    #nav-menu ul li {
-      margin: 10px 0;
-    }
+  #menu-toggle {
+    display: block;
+  }
+  
+  #nav-menu {
+    flex-direction: column;
+    align-items: center;
+    background: var(--mobile-bg);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  #nav-menu ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  
+  #nav-menu ul li {
+    margin: 10px 0;
   }
 
   /* Hero tweaks */
@@ -224,16 +229,15 @@ nav ul li a:hover {
   }
 }
 
-@media (max-width: 480px) {
-  .framed-section, .services, .feedback {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-  .portfolio-grid {
-    gap: 8px;
-  }
-
+/* === Portrait and Landscape === */
+@media (max-width: 480px) and (orientation: portrait) {
+  /* Add specific styles for portrait mode */
 }
+
+@media (max-width: 480px) and (orientation: landscape) {
+  /* Add specific styles for landscape mode */
+}
+
 
   /* Hero Section */
   .hero {
