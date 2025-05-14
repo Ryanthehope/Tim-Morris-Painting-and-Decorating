@@ -5,13 +5,6 @@
   --text-color: #333;
 }
 
-h1 {
-  font-family: Georgia, serif;
-  font-size: 3rem;
-  line-height: 1.1;          
-  margin: 0;
-  text-align: center;  
-}
 
 h2 {
   font-family: Georgia, serif;
@@ -21,13 +14,13 @@ h2 {
   text-align: center;  
 }
 
-
 /* Header */
 header {
   background: var(--secondary-bg);
   margin: 0 100px 15px;
   /* remove display:flex here if you had it on header directly */
 }
+
 
 header .container {
   display: grid;
@@ -39,82 +32,169 @@ header .container {
   background: var(--secondary-bg);
 }
 
-/* Logo sizing */
-.logo-container {
-  width: 140px;
-  height: 140px;
-  margin-right: 30px;
-}
-.logo-container img {
-  width: 100%;
-  height: auto;
+/* Logo Styling */
+.logo {
+  max-height: 300px;  /* Adjust for a bigger logo */
 }
 
-/* Site title & nav block */
-.site-title {
-  display: flex;
-  flex-direction: column;      
-  align-items: center;         
-  gap: 10px;                   
+/* Header Title Styling */
+.header-title {
+  font-size: 2.5rem;
+  margin: 0;           /* Remove default margins */
+  padding: 0.5rem 0;   /* Adjust vertical padding as needed */
+  line-height: 1;      /* Ensures a tight line-height */
 }
 
-/* Nav links */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-nav a {
+/* Custom NAV Link Styling */
+.custom-nav-link {
   font-size: 1.8rem;
   font-weight: bold;
-  color: var(--primary-bg);
+  color: var(--primary-bg) !important;
   text-decoration: none;
 }
 
-nav a:hover {
-  color: var(--accent-hover);
-  text-decoration: underline;
-}
-nav ul li a {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: var(--primary-bg);
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  color: var(--accent-hover);
+.custom-nav-link:hover {
+  color: var(--accent-hover) !important;
   text-decoration: underline;
 }
 
-/* Logo tweaks (if needed) */
-.logo-container {
-  width: 140px;    /* up from 100px */
-  height: 140px;   /* up from 100px */
-  border-radius: 20%;
-  margin-right: 30px;
+
+/* Mobile Menu: show toggle button */
+#menu-toggle {
+  display: none; /* shown in media query below */
 }
 
-/* Site title and nav */
-.site-title {
-  display: flex;
-  align-items: center;        
-  gap: 20px;
+/* —————————————— */
+/* === Phones (up to 480px) === */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  @media (max-width: 768px) {
+    #menu-toggle {
+      display: block;
+    }
+    
+    #nav-menu {
+      flex-direction: column;
+      align-items: center;
+      background: var(--mobile-bg);
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+    }
+    
+    #nav-menu ul {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+    
+    #nav-menu ul li {
+      margin: 10px 0;
+    }
+  }
+
+  /* Hero tweaks */
+  .portfolio-hero-content {
+    padding: 20px;
+  }
+  .portfolio-hero-content h2 {
+    font-size: 1.6rem;
+  }
+  .portfolio-hero-content p {
+    font-size: 1rem;
+  }
+
+  /* Portfolio grid for small phones */
+  .portfolio {
+    padding: 30px 10px;
+  }
+  .portfolio h2 {
+    font-size: 1.4rem;
+  }
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+
+/* === Tablets (481px to 768px) === */
+@media (min-width: 481px) and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  @media (max-width: 768px) {
+    #menu-toggle {
+      display: block;
+    }
+    
+    #nav-menu {
+      flex-direction: column;
+      align-items: center;
+      background: var(--mobile-bg);
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+    }
+    
+    #nav-menu ul {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+    
+    #nav-menu ul li {
+      margin: 10px 0;
+    }
+  }
+
+  /* Hero tweaks */
+  .portfolio-hero-content {
+    padding: 30px;
+  }
+  .portfolio-hero-content h2 {
+    font-size: 2rem;
+  }
+  .portfolio-hero-content p {
+    font-size: 1.05rem;
+  }
+
+  /* Portfolio grid for tablets */
+  .portfolio {
+    padding: 40px 15px;
+  }
+  .portfolio h2 {
+    font-size: 1.8rem;
+  }
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+  }
 }
 
 @media (max-width: 480px) {
-  .portfolio h2 {
-    font-size: 1.5rem; /* Slight tweak instead of fully overriding Bootstrap */
+  .framed-section, .services, .feedback {
+    max-width: 90%;
+    margin: 0 auto;
   }
   .portfolio-grid {
-    gap: 5px; /* Adjusting instead of replacing Bootstrap’s spacing */
+    gap: 8px;
   }
+
 }
-
-
 
   /* Hero Section */
   .hero {
@@ -480,6 +560,9 @@ nav ul li a:hover {
   }
 
   .hero2 a:hover {
+    text-decoration: underline;
+    color: black;
+  }
     text-decoration: underline;
     color: black;
   }
