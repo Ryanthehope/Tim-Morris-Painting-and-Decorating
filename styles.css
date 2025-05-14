@@ -105,138 +105,15 @@ nav ul li a:hover {
   gap: 20px;
 }
 
-/* === Small phones (max-width: 480px) === */
 @media (max-width: 480px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  #menu-toggle {
-    display: block;
-  }
-  
-  #nav-menu {
-    flex-direction: column;
-    align-items: center;
-    background: var(--mobile-bg);
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-  }
-  
-  #nav-menu ul {
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
-  
-  #nav-menu ul li {
-    margin: 10px 0;
-  }
-
-  /* Hero tweaks */
-  .portfolio-hero-content {
-    padding: 20px;
-  }
-  .portfolio-hero-content h2 {
-    font-size: 1.6rem;
-  }
-  .portfolio-hero-content p {
-    font-size: 1rem;
-  }
-
-  /* Portfolio grid for small phones */
-  .portfolio {
-    padding: 30px 10px;
-  }
   .portfolio h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem; /* Slight tweak instead of fully overriding Bootstrap */
   }
   .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .framed-section, .services, .feedback {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-  .portfolio-grid {
-    gap: 8px;
+    gap: 5px; /* Adjusting instead of replacing Bootstrap’s spacing */
   }
 }
 
-/* === Tablets (481px to 768px) === */
-@media (min-width: 481px) and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  #menu-toggle {
-    display: block;
-  }
-  
-  #nav-menu {
-    flex-direction: column;
-    align-items: center;
-    background: var(--mobile-bg);
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-  }
-  
-  #nav-menu ul {
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
-  
-  #nav-menu ul li {
-    margin: 10px 0;
-  }
-
-  /* Hero tweaks */
-  .portfolio-hero-content {
-    padding: 30px;
-  }
-  .portfolio-hero-content h2 {
-    font-size: 2rem;
-  }
-  .portfolio-hero-content p {
-    font-size: 1.05rem;
-  }
-
-  /* Portfolio grid for tablets */
-  .portfolio {
-    padding: 40px 15px;
-  }
-  .portfolio h2 {
-    font-size: 1.8rem;
-  }
-  .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 12px;
-    margin-top: 12px;
-  }
-}
-
-/* === Portrait and Landscape === */
-@media (max-width: 480px) and (orientation: portrait) {
-  /* Add specific styles for portrait mode */
-}
-
-@media (max-width: 480px) and (orientation: landscape) {
-  /* Add specific styles for landscape mode */
-}
 
 
   /* Hero Section */
