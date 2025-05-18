@@ -67,45 +67,18 @@ header .container {
 }
 
 
-/* Mobile Menu: show toggle button */
 #menu-toggle {
-  display: none; /* shown in media query below */
+  display: none;
 }
 
 /* —————————————— */
 /* === Phones (up to 480px) === */
 @media (max-width: 480px) {
+  /* Header stacks vertically */
   header {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-  }
-
-  @media (max-width: 768px) {
-    #menu-toggle {
-      display: block;
-    }
-    
-    #nav-menu {
-      flex-direction: column;
-      align-items: center;
-      background: var(--mobile-bg);
-      position: absolute;
-      top: 50px;
-      left: 0;
-      width: 100%;
-      padding: 10px;
-    }
-    
-    #nav-menu ul {
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
-    }
-    
-    #nav-menu ul li {
-      margin: 10px 0;
-    }
   }
 
   /* Hero tweaks */
@@ -119,7 +92,7 @@ header .container {
     font-size: 1rem;
   }
 
-  /* Portfolio grid for small phones */
+  /* Portfolio: single column */
   .portfolio {
     padding: 30px 10px;
   }
@@ -127,7 +100,8 @@ header .container {
     font-size: 1.4rem;
   }
   .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 10px;
     margin-top: 10px;
   }
@@ -135,38 +109,56 @@ header .container {
 
 /* === Tablets (481px to 768px) === */
 @media (min-width: 481px) and (max-width: 768px) {
+  /* Header stacks vertically but with more gap */
   header {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
 
-  @media (max-width: 768px) {
-    #menu-toggle {
-      display: block;
-    }
-    
-    #nav-menu {
-      flex-direction: column;
-      align-items: center;
-      background: var(--mobile-bg);
-      position: absolute;
-      top: 50px;
-      left: 0;
-      width: 100%;
-      padding: 10px;
-    }
-    
-    #nav-menu ul {
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
-    }
-    
-    #nav-menu ul li {
-      margin: 10px 0;
-    }
+  /* Portfolio: two columns */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 10px;
   }
+}
+
+/* —————————————— */
+/* === Mobile Nav (any screen ≤ 768px) === */
+@media (max-width: 768px) {
+  /* Show the hamburger/menu toggle */
+  #menu-toggle {
+    display: block;
+  }
+  
+  /* Slide-down nav menu */
+  #nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--mobile-bg);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  /* Vertical list items */
+  #nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  #nav-menu ul li {
+    margin: 10px 0;
+  }
+}
 
   /* Hero tweaks */
   .portfolio-hero-content {
