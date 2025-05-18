@@ -185,17 +185,6 @@ header .container {
   }
 }
 
-@media (max-width: 480px) {
-  .framed-section, .services, .feedback {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-  .portfolio-grid {
-    gap: 8px;
-  }
-
-}
-
   /* Hero Section */
   .hero {
     border-radius: 10px;
@@ -403,8 +392,11 @@ header .container {
   background-color: white;
   padding: 40px;
   border-radius: 12px;
+  width: 100%
   max-width: 1200px;
   margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
   
@@ -416,11 +408,11 @@ header .container {
   
   /* Container for the grid */
 .portfolio-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    line-height: 0; /* Remove inline element spacing */
+    margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
   }
   
   /* Each portfolio item */
@@ -436,10 +428,9 @@ header .container {
   
   /* Portfolio images */
   .portfolio-item img {
-    width: 100%;
+    max-width: 100%;
+    height: auto
     aspect-ratio: 16 / 9; 
-    width: 100%; 
-    object-fit: cover;
     object-fit: cover;
     display: block;
     margin: 0;
