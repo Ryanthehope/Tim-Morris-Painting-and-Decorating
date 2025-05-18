@@ -180,6 +180,13 @@ footer a:hover {
   text-decoration: underline;
   color: #000;
 }
+.framed-section {
+  background-color: var(--primary-bg);
+  padding: 2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;       
+}
 
 /* =====================
    Responsive Breakpoints
@@ -192,4 +199,10 @@ footer a:hover {
 
 @media (min-width: 481px) and (max-width: 768px) {
   h2 { font-size: 1.75rem; }
+}
+@media (max-width: 480px) {
+  .framed-section {
+    margin: 0 auto 1rem;
+    max-width: 90%;
+  }
 }
