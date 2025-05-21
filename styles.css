@@ -402,6 +402,23 @@ header .container {
   .service-item {
     padding: 15px;
   }
+  .framed-section {
+    margin: 0 10px 15px;  /* Reduce horizontal margins */
+    padding: 20px 15px;    /* Adjust padding to reduce overall width */
+  }
+  
+  .hero {
+    padding: 60px 10px;    /* Reduce hero padding so it fits better */
+  }
+  
+  .hero-content h2 {
+    font-size: 1.8rem;     /* Slightly smaller heading for mobile */
+  }
+  
+  .hero-content p {
+    font-size: 1rem;       /* Adjust paragraph text as needed */
+  }
+
 }
 }
 
