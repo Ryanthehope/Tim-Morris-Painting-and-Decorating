@@ -338,6 +338,19 @@ header .container {
   }
 }
 
+.portfolio-hero-content {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .framed-section {
+    margin: 0 auto;
+    padding: 20px;
+    width: 90%;
+  }
+}
+
+
 /* ----- Mobile Devices (max-width: 480px) ----- */
 @media (max-width: 480px) {
   header {
