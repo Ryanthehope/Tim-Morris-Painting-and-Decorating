@@ -36,7 +36,7 @@ header .container {
   grid-template-columns: auto 1fr;
   align-items: center;       /* vertical center */
   padding: 20px 40px;
-  max-width: 1600px;
+  width: 100%;
   margin: 0 auto;
   background: var(--secondary-bg);
 }
@@ -189,7 +189,7 @@ header .container {
   .about {
     padding: 50px 20px;
     background: var(--primary-bg);
-    max-width: 900px;
+    width: 100%;
     margin: 30px auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -248,7 +248,7 @@ header .container {
   }
   
   .portfolio-hero-content {
-    max-width: 1600px;
+    width: 100%;
     margin: 0 auto;
     background: rgba(234, 209, 150, 0.9); /* semi-transparent beige overlay */
     padding: 40px;
@@ -268,7 +268,7 @@ header .container {
   background-color: white;
   padding: 40px;
   border-radius: 12px;
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -291,7 +291,6 @@ header .container {
     background: var(--beige);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    overflow: hidden;
     width: 300px;
   }
   
@@ -337,6 +336,7 @@ header .container {
     margin: 10px 0;
   }
 
+
 .portfolio-hero-content {
     max-width: 90%;
     padding: 20px;
@@ -347,8 +347,8 @@ header .container {
     padding: 20px;
     width: 90%;
   }
-}
 
+  }
 
 /* ----- Mobile Devices (max-width: 480px) ----- */
 @media (max-width: 480px) {
