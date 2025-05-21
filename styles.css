@@ -6,6 +6,7 @@
 }
 
 
+
 h2 {
   font-family: Georgia, serif;
   font-size: 2rem;
@@ -67,122 +68,9 @@ header .container {
 }
 
 
+/* Mobile Menu: show toggle button */
 #menu-toggle {
-  display: none;
-}
-
-/* —————————————— */
-/* === Phones (up to 480px) === */
-@media (max-width: 480px) {
-  /* Header stacks vertically */
-  header {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  /* Hero tweaks */
-  .portfolio-hero-content {
-    padding: 20px;
-  }
-  .portfolio-hero-content h2 {
-    font-size: 1.6rem;
-  }
-  .portfolio-hero-content p {
-    font-size: 1rem;
-  }
-
-  /* Portfolio: single column */
-  .portfolio {
-    padding: 30px 10px;
-  }
-  .portfolio h2 {
-    font-size: 1.4rem;
-  }
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin-top: 10px;
-  }
-}
-
-/* === Tablets (481px to 768px) === */
-@media (min-width: 481px) and (max-width: 768px) {
-  /* Header stacks vertically but with more gap */
-  header {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  /* Portfolio: two columns */
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin-top: 10px;
-  }
-}
-
-/* —————————————— */
-/* === Mobile Nav (any screen ≤ 768px) === */
-@media (max-width: 768px) {
-  /* Show the hamburger/menu toggle */
-  #menu-toggle {
-    display: block;
-  }
-  
-  /* Slide-down nav menu */
-  #nav-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: var(--mobile-bg);
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-  }
-  
-  /* Vertical list items */
-  #nav-menu ul {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-  #nav-menu ul li {
-    margin: 10px 0;
-  }
-}
-
-  /* Hero tweaks */
-  .portfolio-hero-content {
-    padding: 30px;
-  }
-  .portfolio-hero-content h2 {
-    font-size: 2rem;
-  }
-  .portfolio-hero-content p {
-    font-size: 1.05rem;
-  }
-
-  /* Portfolio grid for tablets */
-  .portfolio {
-    padding: 40px 15px;
-  }
-  .portfolio h2 {
-    font-size: 1.8rem;
-  }
-  .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 12px;
-    margin-top: 12px;
-  }
+  display: none; /* shown in media query below */
 }
 
   /* Hero Section */
@@ -243,50 +131,38 @@ header .container {
   .services {
     text-align: center;
     padding: 50px 20px;
-    margin: 0 auto;
-    max-width: 1400px;
+    margin: 0 100px 15px;
     background: var(--primary-bg);
-}
-
-/* Title styling */
-.services h2 {
+  }
+  
+  .services h2 {
     font-size: 28px;
-    margin: 0 0 40px;
+    margin-bottom: 20px;
     color: var(--secondary-bg);
-    display: block;
-    width: 100%;
-}
-
-/* Responsive grid for service cards */
-.service-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .service-list {
+    display: flex;
+    justify-content: center;
     gap: 20px;
-}
-
-/* Ensure any h2 inside service-list spans full width */
-.service-list h2 {
-    grid-column: 1 / -1;
-    text-align: center;
-    margin-bottom: 40px;
-    width: 100%;
-}
-
-.service-item {
+    flex-wrap: wrap;
+  }
+  
+  .service-item {
     background: var(--secondary-bg);
     padding: 20px;
+    width: 250px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.service-item h3 {
+  }
+  
+  .service-item h3 {
     margin-bottom: 10px;
-}
-
-.service-item p {
+  }
+  
+  .service-item p {
     color: black;
-}
-
+  }
   
   /* Footer */
   footer {
@@ -392,11 +268,8 @@ header .container {
   background-color: white;
   padding: 40px;
   border-radius: 12px;
-  width: 100%
   max-width: 1200px;
   margin: 0 auto;
-  box-sizing: border-box;
-  padding: 0 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
   
@@ -408,11 +281,9 @@ header .container {
   
   /* Container for the grid */
 .portfolio-grid {
-    margin: 0 auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
   }
   
   /* Each portfolio item */
@@ -422,19 +293,14 @@ header .container {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
     width: 300px;
-    margin: 0; /* Ensure no margin creates unwanted gaps */
-    padding: 0;
   }
   
   /* Portfolio images */
   .portfolio-item img {
-    max-width: 100%;
-    height: auto
+    width: 100%;
     aspect-ratio: 16 / 9; 
+    width: 100%; 
     object-fit: cover;
-    display: block;
-    margin: 0;
-    padding: 0;
   }
   
   /* Captions inside portfolio items */
@@ -443,10 +309,81 @@ header .container {
     font-size: 16px;
     color: var(--text-color);
     line-height: 1.6; /* Normal line height for text */
-    margin: 0; /* Remove any default margins */
   }
   
-  
+  @media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  #nav-menu {
+    flex-direction: column;
+    align-items: center;
+    background: var(--mobile-bg);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  #nav-menu ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  #nav-menu ul li {
+    margin: 10px 0;
+  }
+}
+
+/* ----- Mobile Devices (max-width: 480px) ----- */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .portfolio-hero-content {
+    padding: 20px;
+  }
+
+  .portfolio h2 {
+    font-size: 1.4rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 8px;
+    margin-top: 10px;
+  }
+}
+
+/* ----- Tablets (481px to 768px) ----- */
+@media (min-width: 481px) and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .portfolio-hero-content {
+    padding: 30px;
+  }
+
+  .portfolio h2 {
+    font-size: 1.8rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+  }
+}
+
   .cta {
     padding: 50px 20px;
     text-align: center;
@@ -563,9 +500,6 @@ header .container {
   }
 
   .hero2 a:hover {
-    text-decoration: underline;
-    color: black;
-  }
     text-decoration: underline;
     color: black;
   }
