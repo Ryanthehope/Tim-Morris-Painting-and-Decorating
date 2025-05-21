@@ -20,6 +20,7 @@ body {
   padding-right: env(safe-area-inset-right);
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
+  overflow-x: hidden;
 }
 
 
@@ -43,7 +44,10 @@ header .container {
 
 /* Logo Styling */
 .logo {
-  max-height: 300px;  /* Adjust for a bigger logo */
+  max-height: 300px;
+  display: block;
+  width: auto;
+  max-width: 100%;
 }
 
 /* Header Title Styling */
@@ -169,9 +173,9 @@ header .container {
     background: var(--primary-bg);
     color: var(--secondary-bg);
     padding: 20px;
-    margin-top: 20px;
-    margin: 0 100px 15px;
-
+    padding: 20px;
+    text-align: center;
+    width: 100%;
   }
   
   footer a {
@@ -512,11 +516,6 @@ header .container {
   .hero2 p {
     font-size: 18px;
     margin-bottom: 20px;
-  }
-
-  .hero2 a:hover {
-    text-decoration: underline;
-    color: black;
   }
 
   .hero2 a:hover {
