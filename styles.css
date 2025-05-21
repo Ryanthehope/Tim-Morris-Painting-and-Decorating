@@ -57,6 +57,13 @@ header .container {
   padding: 0.5rem 0;   /* Adjust vertical padding as needed */
   line-height: 1;      /* Ensures a tight line-height */
 }
+.spacer img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 
 /* Custom NAV Link Styling */
 .custom-nav-link {
@@ -378,6 +385,13 @@ header .container {
     gap: 15px;
   }
 
+  .container,
+  .header-top {
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+
   .portfolio-hero-content {
     padding: 20px;
   }
@@ -408,7 +422,8 @@ header .container {
   }
   
   .hero {
-    padding: 60px 10px;    /* Reduce hero padding so it fits better */
+    padding: 60px 10px;
+    min-height: auto;    /* Reduce hero padding so it fits better */
   }
   
   .hero-content h2 {
@@ -416,7 +431,8 @@ header .container {
   }
   
   .hero-content p {
-    font-size: 1rem;       /* Adjust paragraph text as needed */
+    font-size: 1rem;
+    line-height: 1.4;       /* Adjust paragraph text as needed */
   }
 
 }
