@@ -55,6 +55,7 @@ header .container {
 }
 .logo-container img {
   max-height: 300px;  /* Adjust the size for desktop */
+  width: auto;
 }
 
 .spacer img {
