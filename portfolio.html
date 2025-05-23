@@ -16,28 +16,28 @@
     <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-   <div class="framed-section">
+  <div class="framed-section">
    <header>
   <!-- Top Header: Logo & Title -->
   <div class="container-fluid header-top py-3" style="background: var(--secondary-bg);">
-    <div class="d-flex flex-nowrap align-items-center">
-      <!-- Logo Container (no wrapping) -->
+    <!-- Using a nested container to align content with other sections -->
+    <div class="container d-flex flex-wrap align-items-center header-flex">
+      <!-- Logo Container -->
       <div class="flex-shrink-0 text-center">
         <a href="index.html" class="d-block">
-          <img src="Images/Logo/logo.webp" alt="T. Morris Logo" class="img-fluid" style="max-height:300px;">
+          <img src="Images/Logo/logo.webp" alt="T. Morris Logo" class="img-fluid logo" style="max-height:300px;">
         </a>
       </div>
       <!-- Header Title Container -->
-      <div class="flex-grow-1 text-center ps-3">
+      <div class="flex-grow-1 ps-3 text-center header-text-container">
         <h1 class="header-title h2 mb-0 text-dark">T. Morris Painting &amp; Decorating</h1>
       </div>
     </div>
   </div>
-  </div>
 
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg" style="background: var(--secondary-bg);">
+    <div class="container">
       <!-- Navbar Toggler for Mobile Devices -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#navMenu" aria-controls="navMenu"
@@ -48,22 +48,23 @@
       <div class="collapse navbar-collapse justify-content-center" id="navMenu">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link custom-nav-link" href="index.html">Home</a>
+            <a class="nav-link custom-nav-link text-dark" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link custom-nav-link" href="portfolio.html">Portfolio</a>
+            <a class="nav-link custom-nav-link text-dark" href="portfolio.html">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link custom-nav-link" href="testimonial.html">Testimonial</a>
+            <a class="nav-link custom-nav-link text-dark" href="testimonial.html">Testimonial</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link custom-nav-link" href="contact.html">Contact</a>
+            <a class="nav-link custom-nav-link text-dark" href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 </header>
+  </div>
     
   <div class="framed-section">
       <section class="portfolio-hero">
@@ -74,7 +75,6 @@
       </section>
     </div>
       
-    
       <!-- Portfolio Grid -->
       <div class="framed-section">
   <section class="portfolio py-4">
