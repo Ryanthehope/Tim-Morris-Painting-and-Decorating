@@ -49,11 +49,13 @@ header .container {
   margin: 0;
 }
 
-.logo-container img {
-  max-height: 250px;  /* Adjust the size for desktop */
+/* Logo Styling */
+.logo {
+  max-height: 300px;
 }
-
-/* Header Title Styling */
+.logo-container img {
+  max-height: 300px;  /* Adjust the size for desktop */
+}
 
 .spacer img {
   width: 100%;
@@ -324,8 +326,8 @@ header .container {
     display: block;
   }
 
-  .logo-container img {
-    max-height: 120px;
+  .logo {
+    max-height: 150px;  /* Reduce logo size on mobile */
   }
 
    .header-top {
@@ -333,7 +335,7 @@ header .container {
    }
 
    .header-title {
-    font-size: 1.5  rem;
+    font-size: 1.5rem;
   }
 
   .header-flex {
@@ -403,7 +405,10 @@ header .container {
   .header-top {
     padding: 10px 0;
   }
-  
+  .logo {
+    max-height: 100px;
+  }
+
   .logo-container img {
     max-height: 100px;
   }
