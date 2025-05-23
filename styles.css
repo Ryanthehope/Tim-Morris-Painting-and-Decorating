@@ -333,19 +333,12 @@ header .container {
     max-height: 150px;  /* Reduce logo size on mobile */
   }
 
-  header.container {
-    padding: 5px;
-        grid-template-columns: 1fr; /* Stack elements on mobile */
-        text-align: center;
-
-   }
-
    .header-top {
-    padding: 15px 20px;
+    padding: 15px 15px;
    }
 
    .header-title {
-    font-size: 1.6rem;
+    font-size: 1.5  rem;
   }
 
   .header-flex {
@@ -413,7 +406,7 @@ header .container {
   }
 
   .header-top {
-    padding: 10px 15px;
+    padding: 10px 10px;
   }
   .logo {
     max-height: 100px;
