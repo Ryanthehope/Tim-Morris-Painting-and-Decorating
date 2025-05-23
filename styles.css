@@ -30,7 +30,7 @@ header {
 
 .header-top {
   background: var(--secondary-bg);
-  padding: 20px 40px;
+  padding: 20px 0px;
 }
 
 header .container {
@@ -46,20 +46,15 @@ header .container {
 .header-title {
   color: var(--text-dark);
   font-size: 2rem;
+  margin: 0;
 }
 
-/* Logo Styling */
-.logo {
-  max-height: 300px;
+.logo-container img {
+  max-height: 250px;  /* Adjust the size for desktop */
 }
 
 /* Header Title Styling */
-.header-title {
-  font-size: 2.5rem;
-  margin: 0;           /* Remove default margins */
-  padding: 0.5rem 0;   /* Adjust vertical padding as needed */
-  line-height: 1;      /* Ensures a tight line-height */
-}
+
 .spacer img {
   width: 100%;
   height: auto;
@@ -329,12 +324,12 @@ header .container {
     display: block;
   }
 
-  .logo {
-    max-height: 150px;  /* Reduce logo size on mobile */
+  .logo-container img {
+    max-height: 120px;
   }
 
    .header-top {
-    padding: 15px 15px;
+    padding: 15px 0;
    }
 
    .header-title {
@@ -406,11 +401,13 @@ header .container {
   }
 
   .header-top {
-    padding: 10px 10px;
+    padding: 10px 0;
   }
-  .logo {
+  
+  .logo-container img {
     max-height: 100px;
   }
+
   .header-title {
     font-size: 1.4rem;
   }
