@@ -28,6 +28,11 @@ header {
   /* remove display:flex here if you had it on header directly */
 }
 
+.header-top {
+  background: var(--secondary-bg);
+  padding: 20px 40px;
+}
+
 header .container {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -38,12 +43,14 @@ header .container {
   background: var(--secondary-bg);
 }
 
+.header-title {
+  color: var(--text-dark);
+  font-size: 2rem;
+}
+
 /* Logo Styling */
 .logo {
   max-height: 300px;
-  display: block;
-  width: auto;
-  max-width: 100%;
 }
 
 /* Header Title Styling */
@@ -321,6 +328,11 @@ header .container {
   #menu-toggle {
     display: block;
   }
+
+  .logo {
+    max-height: 150px;  /* Reduce logo size on mobile */
+  }
+
   header.container {
     padding: 5px;
         grid-template-columns: 1fr; /* Stack elements on mobile */
@@ -333,7 +345,16 @@ header .container {
    }
 
    .header-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+
+  .header-flex {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .header-text-container {
+    width: 100%;
+    margin-top: 10px;
   }
 
   .custom-nav-link {
@@ -391,6 +412,15 @@ header .container {
     gap: 15px;
   }
 
+  .header-top {
+    padding: 10px 15px;
+  }
+  .logo {
+    max-height: 100px;
+  }
+  .header-title {
+    font-size: 1.4rem;
+  }
   .container,
   .header-top {
     width: 100%;
