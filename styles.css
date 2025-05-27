@@ -51,10 +51,10 @@ header .container {
 
 /* Logo Styling */
 .logo {
-  max-height: 300px;
+  min-height: 300px;
 }
 .logo-container img {
-  max-height: 300px;  /* Adjust the size for desktop */
+  min-height: 300px;  /* Adjust the size for desktop */
   width: auto;
 }
 
@@ -337,7 +337,7 @@ header .container {
   
   .logo,
   .logo-container img {
-    max-height: 150px;  /* Reduce logo size on mobile/tablet */
+    min-height: 150px;  /* Reduce logo size on mobile/tablet */
     display: block;
   }
   
@@ -455,7 +455,7 @@ header .container {
   
   .logo,
   .logo-container img {
-    max-height: 100px;
+    min-height: 100px;
     display: block;
   }
   
