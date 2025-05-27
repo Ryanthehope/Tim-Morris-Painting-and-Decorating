@@ -330,6 +330,11 @@ header .container {
   .logo {
     max-height: 150px;  /* Reduce logo size on mobile */
   }
+    
+  .logo-container img {
+    max-height: 150px; /* Ensure it's not too small */
+    display: block; /* Prevent accidental hiding */
+}
 
     header {
     display: flex;
@@ -352,8 +357,12 @@ header .container {
     justify-content: center;
   }
   .header-text-container {
+    text-align: center; /* Ensures proper alignment */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the text */
+    justify-content: center;
     width: 100%;
-    margin-top: 10px;
   }
 
   .custom-nav-link {
@@ -418,10 +427,12 @@ header .container {
   }
   .logo {
     max-height: 100px;
+    display: block;
   }
 
   .logo-container img {
     max-height: 100px;
+    display: block;
   }
 
   .header-title {
