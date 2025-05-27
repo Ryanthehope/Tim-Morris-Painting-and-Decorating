@@ -322,53 +322,59 @@ header .container {
     line-height: 1.6; /* Normal line height for text */
   }
   
-  @media (max-width: 768px) {
+ /* ===== Base / Global Styles for Responsive Parts ===== */
+#menu-toggle {
+  /* This will be hidden by default on larger screens */
+  display: none;
+}
+
+/* ===== Tablet & Mobile (max-width: 768px) ===== */
+@media (max-width: 768px) {
+  /* Navigation and header adjustments */
   #menu-toggle {
     display: block;
   }
-
-  .logo {
-    max-height: 150px;  /* Reduce logo size on mobile */
-  }
-    
+  
+  .logo,
   .logo-container img {
-    max-height: 150px; /* Ensure it's not too small */
-    display: block; /* Prevent accidental hiding */
-}
-
-    header {
+    max-height: 150px;  /* Reduce logo size on mobile/tablet */
+    display: block;
+  }
+  
+  header {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
-
-   .header-top {
+  
+  .header-top {
     padding: 25px 0;
-    background: var(--secondary-bg);
-   }
-
-   .header-title {
+    background: var(--secondary-bg);  /* Ensure this variable is set */
+  }
+  
+  .header-title {
     font-size: 1.5rem;
   }
-
+  
   .header-flex {
     flex-wrap: wrap;
     justify-content: center;
   }
+  
   .header-text-container {
-    text-align: center; /* Ensures proper alignment */
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the text */
+    align-items: center;
     justify-content: center;
     width: 100%;
   }
-
+  
   .custom-nav-link {
     font-size: 1.1rem;
   }
-
+  
   #nav-menu {
     flex-direction: column;
     align-items: center;
@@ -381,102 +387,144 @@ header .container {
     margin-top: 10px;
     z-index: 1000;
   }
-
+  
   #nav-menu ul {
     flex-direction: column;
     width: 100%;
     text-align: center;
   }
-
+  
   #nav-menu ul li {
     margin: 10px 0;
   }
-
-
-.portfolio-hero-content {
+  
+  /* Portfolio and hero adjustments for tablet/mobile */
+  .portfolio-hero-content {
     max-width: 95%;
     padding: 10px;
   }
-
+  
   .framed-section {
     margin: 0 auto;
     padding: 10px;
     width: 95%;
   }
-   .service-list {
+  
+  .service-list {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-
-.portfolio-grid {
+  
+  .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-
   }
+  
+  /* Additional adjustments for overall sections */
+  .framed-section {
+    margin: 0 10px 15px;  /* Reduce horizontal margins */
+    padding: 20px 15px;
+  }
+  
+  .hero {
+    padding: 60px 10px;
+    min-height: auto;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
 
-/* ----- Mobile Devices (max-width: 480px) ----- */
+/* ===== Mobile Devices (max-width: 480px) ===== */
 @media (max-width: 480px) {
   header {
     flex-direction: column;
     align-items: center;
     gap: 15px;
   }
-
+  
   .header-top {
     padding: 10px 0;
   }
-  .logo {
-    max-height: 100px;
-    display: block;
-  }
-
+  
+  .logo,
   .logo-container img {
     max-height: 100px;
     display: block;
   }
-
+  
   .header-title {
     font-size: 1.4rem;
   }
+  
   .container,
   .header-top {
     width: 100%;
     padding: 0 10px;
     margin: 0 auto;
   }
-
+  
   .portfolio-hero-content {
     padding: 20px;
   }
-
+  
   .portfolio h2 {
     font-size: 1.4rem;
   }
-
+  
   .portfolio-grid {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 8px;
     margin-top: 10px;
   }
-
-  .logo {
-    max-height: 200px;
-  }
-
+  
   .services .services-container {
     padding: 30px 15px;
   }
+  
   .services h2 {
     font-size: 2rem;
   }
+  
   .service-item {
     padding: 15px;
   }
+  
   .service-item h3 {
     font-size: 1.3rem;
   }
+  
   .service-item p {
     font-size: 0.95rem;
+  }
+}
+
+/* ===== Tablets Only (481px to 768px) ===== */
+@media (min-width: 481px) and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .portfolio-hero-content {
+    padding: 30px;
+  }
+  
+  .portfolio h2 {
+    font-size: 1.8rem;
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 12px;
   }
 }
 
