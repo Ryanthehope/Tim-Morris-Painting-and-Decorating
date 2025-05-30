@@ -24,8 +24,7 @@ body {
 /* Header */
 header {
   background: var(--secondary-bg);
-  margin: 0 100px 15px;
-  /* remove display:flex here if you had it on header directly */
+  margin: 0 15px;
 }
 
 .header-top {
@@ -34,8 +33,7 @@ header {
 }
 
 header .container {
-  display: grid;
-  grid-template-columns: auto 1fr;
+
   align-items: center;       /* vertical center */
   padding: 20px 40px;
   width: 100%;
@@ -46,15 +44,15 @@ header .container {
 .header-title {
   color: var(--text-dark);
   font-size: 2rem;
-  margin: 0;
+  margin-left: 40px;
 }
 
 /* Logo Styling */
 .logo {
-  min-height: 300px;
+  max-height: 300px;
 }
 .logo-container img {
-  min-height: 300px;  /* Adjust the size for desktop */
+  max-height: 300px;  /* Adjust the size for desktop */
   width: auto;
 }
 
@@ -219,13 +217,6 @@ header .container {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
   
-  /* General Container for Image and Text */
-  .container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
   .navigation-buttons {
     text-align: center;
     margin-top: 1rem;
@@ -322,209 +313,142 @@ header .container {
     line-height: 1.6; /* Normal line height for text */
   }
   
- /* ===== Base / Global Styles for Responsive Parts ===== */
-#menu-toggle {
-  /* This will be hidden by default on larger screens */
-  display: none;
-}
-
-/* ===== Tablet & Mobile (max-width: 768px) ===== */
-@media (max-width: 768px) {
-  /* Navigation and header adjustments */
+  @media (max-width: 768px) {
   #menu-toggle {
     display: block;
   }
-  
-  .logo,
-  .logo-container img {
-    min-height: 150px;  /* Reduce logo size on mobile/tablet */
-    display: block;
+
+  .logo {
+    max-height: 150px;  /* Reduce logo size on mobile */
   }
-  
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .header-top {
-    padding: 25px 0;
-    background: var(--secondary-bg);  /* Ensure this variable is set */
-  }
-  
-  .header-title {
+
+   .header-top {
+    padding: 15px 0;
+   }
+
+   .header-title {
     font-size: 1.5rem;
   }
-  
+
   .header-flex {
     flex-wrap: wrap;
     justify-content: center;
   }
-  
   .header-text-container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100%;
+    margin-top: 10px;
   }
-  
+
   .custom-nav-link {
     font-size: 1.1rem;
   }
-  
+
   #nav-menu {
     flex-direction: column;
     align-items: center;
     background: var(--mobile-bg);
-    position: relative;
-    top: 0;
+    position: absolute;
+    top: 50px;
     left: 0;
     width: 100%;
-    padding: 15px 0;
-    margin-top: 10px;
-    z-index: 1000;
+    padding: 10px;
   }
-  
+
   #nav-menu ul {
     flex-direction: column;
     width: 100%;
     text-align: center;
   }
-  
+
   #nav-menu ul li {
     margin: 10px 0;
   }
-  
-  /* Portfolio and hero adjustments for tablet/mobile */
-  .portfolio-hero-content {
+
+
+.portfolio-hero-content {
     max-width: 95%;
     padding: 10px;
   }
-  
+
   .framed-section {
     margin: 0 auto;
     padding: 10px;
     width: 95%;
   }
-  
-  .service-list {
+   .service-list {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-  
-  .portfolio-grid {
+
+.portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-  }
-  
-  /* Additional adjustments for overall sections */
-  .framed-section {
-    margin: 0 10px 15px;  /* Reduce horizontal margins */
-    padding: 20px 15px;
-  }
-  
-  .hero {
-    padding: 60px 10px;
-    min-height: auto;
-  }
-  
-  .hero-content h2 {
-    font-size: 1.8rem;
-  }
-  
-  .hero-content p {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-}
 
-/* ===== Mobile Devices (max-width: 480px) ===== */
+  }
+
+/* ----- Mobile Devices (max-width: 480px) ----- */
 @media (max-width: 480px) {
   header {
     flex-direction: column;
     align-items: center;
     gap: 15px;
   }
-  
+
   .header-top {
     padding: 10px 0;
   }
-  
-  .logo,
-  .logo-container img {
-    min-height: 100px;
-    display: block;
+  .logo {
+    max-height: 100px;
   }
-  
+
+  .logo-container img {
+    max-height: 100px;
+  }
+
   .header-title {
     font-size: 1.4rem;
   }
-  
   .container,
   .header-top {
     width: 100%;
     padding: 0 10px;
     margin: 0 auto;
+    padding-left: 0px;
+    gap: 0px;
   }
-  
+
   .portfolio-hero-content {
     padding: 20px;
   }
-  
+
   .portfolio h2 {
     font-size: 1.4rem;
   }
-  
+
   .portfolio-grid {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 8px;
     margin-top: 10px;
   }
-  
+
+  .logo {
+    max-height: 200px;
+  }
+
   .services .services-container {
     padding: 30px 15px;
   }
-  
   .services h2 {
     font-size: 2rem;
   }
-  
   .service-item {
     padding: 15px;
   }
-  
   .service-item h3 {
     font-size: 1.3rem;
   }
-  
   .service-item p {
     font-size: 0.95rem;
-  }
-}
-
-/* ===== Tablets Only (481px to 768px) ===== */
-@media (min-width: 481px) and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .portfolio-hero-content {
-    padding: 30px;
-  }
-  
-  .portfolio h2 {
-    font-size: 1.8rem;
-  }
-  
-  .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 12px;
-    margin-top: 12px;
   }
 }
 
