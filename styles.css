@@ -44,7 +44,6 @@ header .container {
 .header-title {
   color: var(--text-dark);
   font-size: 2rem;
-  margin-left: 40px;
 }
 
 /* Logo Styling */
