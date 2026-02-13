@@ -64,7 +64,7 @@ header .container {
 
 /* Custom NAV Link Styling */
 .custom-nav-link {
-  font-size: 1.8rem;
+  font-size: clamp(1rem, 2.5vw, 1.8rem);
   font-weight: bold;
   color: var(--primary-bg) !important;
   text-decoration: none;
