@@ -32,8 +32,12 @@ header {
   padding: 20px 0px;
 }
 
-header .container {
+/* Navigation */
+.navbar {
+  background: var(--secondary-bg);
+}
 
+header .container {
   align-items: center;       /* vertical center */
   padding: 20px 40px;
   width: 100%;
@@ -312,77 +316,98 @@ header .container {
     line-height: 1.6; /* Normal line height for text */
   }
   
+  /* ----- Tablets and Mobile (max-width: 768px) ----- */
   @media (max-width: 768px) {
-  #menu-toggle {
-    display: block;
-  }
+    #menu-toggle {
+      display: block;
+    }
 
-  .logo {
-    max-height: 150px;  /* Reduce logo size on mobile */
-  }
+    .logo {
+      max-height: 150px;  /* Reduce logo size on mobile */
+    }
 
-   .header-top {
-    padding: 15px 0;
-   }
+    .header-top {
+      padding: 15px 0;
+    }
 
-   .header-title {
-    font-size: 1.5rem;
-  }
+    .header-title {
+      font-size: 1.5rem;
+    }
 
-  .header-flex {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .header-text-container {
-    width: 100%;
-    margin-top: 10px;
-  }
+    .header-flex {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-  .custom-nav-link {
-    font-size: 1.1rem;
-  }
+    .header-text-container {
+      width: 100%;
+      margin-top: 10px;
+    }
 
-  #nav-menu {
-    flex-direction: column;
-    align-items: center;
-    background: var(--mobile-bg);
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-  }
+    .custom-nav-link {
+      font-size: 1.1rem;
+    }
 
-  #nav-menu ul {
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
+    #nav-menu {
+      flex-direction: column;
+      align-items: center;
+      background: var(--mobile-bg);
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+    }
 
-  #nav-menu ul li {
-    margin: 10px 0;
-  }
+    #nav-menu ul {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
 
+    #nav-menu ul li {
+      margin: 10px 0;
+    }
 
-.portfolio-hero-content {
-    max-width: 95%;
-    padding: 10px;
-  }
+    .portfolio-hero-content {
+      max-width: 95%;
+      padding: 10px;
+    }
 
-  .framed-section {
-    margin: 0 auto;
-    padding: 10px;
-    width: 95%;
-  }
-   .service-list {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
+    .framed-section {
+      margin: 0 auto;
+      padding: 10px;
+      width: 95%;
+    }
 
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    .service-list {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .framed-section {
+      margin: 0 10px 15px;  /* Reduce horizontal margins */
+      padding: 20px 15px;    /* Adjust padding to reduce overall width */
+    }
+    
+    .hero {
+      padding: 60px 10px;
+      min-height: auto;    /* Reduce hero padding so it fits better */
+    }
+    
+    .hero-content h2 {
+      font-size: 1.8rem;     /* Slightly smaller heading for mobile */
+    }
+    
+    .hero-content p {
+      font-size: 1rem;
+      line-height: 1.4;       /* Adjust paragraph text as needed */
+    }
   }
 
 /* ----- Mobile Devices (max-width: 480px) ----- */
@@ -396,6 +421,7 @@ header .container {
   .header-top {
     padding: 10px 0;
   }
+
   .logo {
     max-height: 100px;
   }
@@ -407,6 +433,7 @@ header .container {
   .header-title {
     font-size: 1.4rem;
   }
+
   .container,
   .header-top {
     width: 100%;
@@ -437,41 +464,23 @@ header .container {
   .services .services-container {
     padding: 30px 15px;
   }
+
   .services h2 {
     font-size: 2rem;
   }
+
   .service-item {
     padding: 15px;
   }
+
   .service-item h3 {
     font-size: 1.3rem;
   }
+
   .service-item p {
     font-size: 0.95rem;
   }
 }
-
-  .framed-section {
-    margin: 0 10px 15px;  /* Reduce horizontal margins */
-    padding: 20px 15px;    /* Adjust padding to reduce overall width */
-  }
-  
-  .hero {
-    padding: 60px 10px;
-    min-height: auto;    /* Reduce hero padding so it fits better */
-  }
-  
-  .hero-content h2 {
-    font-size: 1.8rem;     /* Slightly smaller heading for mobile */
-  }
-  
-  .hero-content p {
-    font-size: 1rem;
-    line-height: 1.4;       /* Adjust paragraph text as needed */
-  }
-
-}
-
 
 /* ----- Tablets (481px to 768px) ----- */
 @media (min-width: 481px) and (max-width: 768px) {
