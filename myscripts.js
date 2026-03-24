@@ -1,12 +1,18 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
+        const targetSelector = this.getAttribute("href");
+        if (!targetSelector || targetSelector === "#") {
+            return;
+        }
+
+        const target = document.querySelector(targetSelector);
+        if (!target) {
+            return;
+        }
+
         e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
+        target.scrollIntoView({
             behavior: "smooth"
         });
     });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector("footer p").innerHTML = `&copy; ${new Date().getFullYear()} T. Morris Painting & Decorating. All Rights Reserved.`;
 });

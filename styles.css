@@ -3,6 +3,9 @@
   --secondary-bg: #EAD196;
   --mobile-bg: #B17F59;
   --text-color: #333;
+  --text-dark: #333;
+  --beige: #EAD196;
+  --maroon: #7D0A0A;
 }
 
 h2 {
@@ -51,9 +54,6 @@ header .container {
 }
 
 /* Logo Styling */
-.logo {
-  max-height: 300px;
-}
 .logo-container img {
   max-height: 300px;  /* Adjust the size for desktop */
   width: auto;
@@ -79,11 +79,6 @@ header .container {
   text-decoration: underline;
 }
 
-/* Mobile Menu: show toggle button */
-#menu-toggle {
-  display: none; /* shown in media query below */
-}
-
   /* Hero Section */
   .hero {
     border-radius: 10px;
@@ -103,7 +98,7 @@ header .container {
     text-align: center;
   }
   
-  .hero h2 {
+  .hero h1 {
     font-size: 36px;
     margin-bottom: 10px;
   }
@@ -189,16 +184,6 @@ header .container {
     padding: 20px;
   }
 
-  footer .footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);  /* Optional similarly to services */
-}
-
-  
   footer a {
     color: var(--secondary-bg);
     text-decoration: none;
@@ -208,37 +193,6 @@ header .container {
   footer a:hover {
     text-decoration: underline;
     color: black;
-  }
-  
-  /* About Section */
-  .about {
-    padding: 50px 20px;
-    background: var(--primary-bg);
-    width: 100%;
-    margin: 30px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
-  .navigation-buttons {
-    text-align: center;
-    margin-top: 1rem;
-  }
-    
-  .caption {
-    color: #f2f2f2;
-    font-size: 1rem;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  /* Main Content */
-  main {
-    padding: 1rem;
-    text-align: center;
   }
   
   /* ================= Portfolio Grid ================= */
@@ -275,19 +229,6 @@ header .container {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
   
-  .portfolio h2 {
-    color: var(--maroon);
-    margin-bottom: 20px;
-    font-size: 28px;
-  }
-  
-  /* Container for the grid */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-  }
-  
   /* Each portfolio item */
   .portfolio-item {
     position: relative;
@@ -318,25 +259,12 @@ header .container {
   
   /* ----- Tablets and Mobile (max-width: 768px) ----- */
   @media (max-width: 768px) {
-    #menu-toggle {
-      display: block;
-    }
-
-    .logo {
-      max-height: 150px;  /* Reduce logo size on mobile */
-    }
-
     .header-top {
       padding: 15px 0;
     }
 
     .header-title {
       font-size: 1.5rem;
-    }
-
-    .header-flex {
-      flex-wrap: wrap;
-      justify-content: center;
     }
 
     .header-text-container {
@@ -346,27 +274,6 @@ header .container {
 
     .custom-nav-link {
       font-size: 1.1rem;
-    }
-
-    #nav-menu {
-      flex-direction: column;
-      align-items: center;
-      background: var(--mobile-bg);
-      position: absolute;
-      top: 50px;
-      left: 0;
-      width: 100%;
-      padding: 10px;
-    }
-
-    #nav-menu ul {
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
-    }
-
-    #nav-menu ul li {
-      margin: 10px 0;
     }
 
     .portfolio-hero-content {
@@ -384,12 +291,6 @@ header .container {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
     .framed-section {
       margin: 0 10px 15px;  /* Reduce horizontal margins */
       padding: 20px 15px;    /* Adjust padding to reduce overall width */
@@ -400,7 +301,7 @@ header .container {
       min-height: auto;    /* Reduce hero padding so it fits better */
     }
     
-    .hero-content h2 {
+    .hero-content h1 {
       font-size: 1.8rem;     /* Slightly smaller heading for mobile */
     }
     
@@ -422,10 +323,6 @@ header .container {
     padding: 10px 0;
   }
 
-  .logo {
-    max-height: 100px;
-  }
-
   .logo-container img {
     max-height: 100px;
   }
@@ -445,24 +342,6 @@ header .container {
 
   .portfolio-hero-content {
     padding: 20px;
-  }
-
-  .portfolio h2 {
-    font-size: 1.4rem;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 8px;
-    margin-top: 10px;
-  }
-
-  .logo {
-    max-height: 200px;
-  }
-
-  .services .services-container {
-    padding: 30px 15px;
   }
 
   .services h2 {
@@ -494,15 +373,6 @@ header .container {
     padding: 30px;
   }
 
-  .portfolio h2 {
-    font-size: 1.8rem;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 12px;
-    margin-top: 12px;
-  }
 }
 
   .cta {
@@ -516,22 +386,6 @@ header .container {
     color: var(--maroon);
     font-size: 28px;
   }
- .testimonials {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.testimonials h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.testimonials p {
-  color: black;
-  margin-bottom: 30px;
-}
-
 .testimonial-card {
   background: #fff;
   border-radius: 12px;
@@ -566,30 +420,9 @@ header .container {
   font-size: 1.1rem;
 }
 
-.testimonial-body p {
-  margin-bottom: 12px;
-  line-height: 1.5;
-}
-
-.testimonial-footer {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.9rem;
-  color: black;
-}
-
 .verified {
   color: green;
 }
-
-  .feedback {
-    color: var(--secondary-bg);
-    text-align: center;
-    margin: 0 100px 15px;
-    background-color: var(--primary-bg);
-    padding: 40px 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  }
   .hero2 {
     background: url(Images/Portfolio/background.webp) center/cover no-repeat;
     
